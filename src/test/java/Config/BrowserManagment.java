@@ -18,7 +18,7 @@ public class BrowserManagment {
         firefoxOptions.addArguments("--headless");
 
         if (browser.equalsIgnoreCase("ch")) {
-            WebDriverManager.chromedriver().setup();
+            WebDriverManager.chromedriver().clearDriverCache().clearResolutionCache().setup();
             if (System.getProperty("os.name").toLowerCase().equals("linux")) {
                 driver = new ChromeDriver(chromeOptions);
             } else {

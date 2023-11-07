@@ -15,7 +15,7 @@ import tests.TestListner;
 @Listeners(TestListner.class)
 public class test1 extends BaseTest {
 
-    @Test
+    @Test(testName = "Search for 123")
     @Description("does 123 found in results")
     public void SearchFor123() throws InterruptedException {
         GoogleMainPage GoogleMainPage= new  GoogleMainPage(driver);
